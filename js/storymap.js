@@ -249,16 +249,15 @@
             var marker9 = L.marker([33.985791, -106.989529], {icon: climbIcon}).addTo(map); //bouldering at box//
 
 
-
-            marker1.bindPopup("<h4><small>View of Mt. Susitna at Midnight, from Flattop Mountain</small></h4> <img class='img-responsive' src='img/susitna.jpg'>");
-            marker2.bindPopup("<h4><small>Moose's Tooth Pizzeria</small></h4> <img class='img-responsive' src='img/moose-s-tooth-pub-and.jpg'>");
-            marker3.bindPopup("<h4><small>Speck and Kiri, Guardians of 703 Franklin St.</small></h4> <img class='img-responsive' src='img/franklin-street-patrol.jpg'>");
-            marker4.bindPopup("<h4><small>The Rio Grande Gorge</small></h4> <img class='img-responsive' src='img/gorge.jpg'>");
-            marker5.bindPopup("<h4><small>Ridgeline to No Name Peak Summit</small></h4> <img class='img-responsive' src='img/ridge-walk.jpg'>");
-            marker6.bindPopup("<h4><small>East Ridge of Mary's Peak</small></h4> <img class='img-responsive' src='img/mary-mtb.png'>");
-            marker7.bindPopup("<h4><small>The Pursuit of Powder, Santiam Pass</small></h4> <img class='img-responsive' src='img/potato-skin.jpg'>");
-            marker8.bindPopup("<h4><small>Mt. Jefferson and The Sisters</small></h4> <img class='img-responsive' src='img/jefferson.jpg'>");
-            marker9.bindPopup("<h4><small>Bouldering at Box Canyon</small></h4> <img class='img-responsive' src='img/opie-3-star.jpg'>");
+            marker1.bindPopup("<h4><small>View of Mt. Susitna at Midnight, from Flattop Mountain</small></h4>  <a href='img/susitna.jpg' target='blank'><img class='img-responsive' src='img/susitna.jpg'></a>");
+            marker2.bindPopup("<h4><small>Moose's Tooth Pizzeria</small></h4> <a href='img/moose-s-tooth-pub-and.jpg' target='blank'><img class='img-responsive' src='img/moose-s-tooth-pub-and.jpg'></a>");
+            marker3.bindPopup("<h4><small>Speck and Kiri, Guardians of 703 Franklin St.</small></h4> <a href='img/franklin-street-patrol.jpg' target='blank'><img class='img-responsive' src='img/franklin-street-patrol.jpg'></a>");
+            marker4.bindPopup("<h4><small>The Rio Grande Gorge</small></h4> <a href='img/gorge.jpg' target='blank'><img class='img-responsive' src='img/gorge.jpg'></a>");
+            marker5.bindPopup("<h4><small>Ridgeline to No Name Peak Summit</small></h4> <a href='img/ridge-walk.jpg' target='blank'><img class='img-responsive' src='img/ridge-walk.jpg'></a>");
+            marker6.bindPopup("<h4><small>East Ridge of Mary's Peak</small></h4> <a href='img/mary-mtb.png' target='blank'><img class='img-responsive' src='img/mary-mtb.png'>");
+            marker7.bindPopup("<h4><small>The Pursuit of Powder, Santiam Pass</small></h4> <a href='img/potato-skin.jpg' target='blank'><img class='img-responsive' src='img/potato-skin.jpg'></a>");
+            marker8.bindPopup("<h4><small>Mt. Jefferson and The Sisters</small></h4> <a href='img/jefferson.jpg' target='blank'><img class='img-responsive' src='img/jefferson.jpg'></a>");
+            marker9.bindPopup("<h4><small>Bouldering at Box Canyon</small></h4> <a href='img/opie-3-star.jpg' target='blank'><img class='img-responsive' src='img/opie-3-star.jpg'></a>");
 
             var currentLayerGroup = L.layerGroup().addTo(map);
             var legendControl = L.control({position: 'topright'}); // you can change the position of the legend Control.
