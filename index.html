@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stomping Grounds</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--meta data for sharing links on Facebook-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!--use a better font for this web map-->
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:700,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.css">
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        .end-background-img {
+            background: url(img/baker-moraine.jpg) no-repeat center center fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <!--add required libraries-->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--story map plugin-->
+    <script src="js/storymap.js"></script>
+
+    <!-- bing map -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
+    <script src="http://gmaclennan.github.io/leaflet-bing-layer/leaflet-bing-layer.js"></script>
+
+    <!-- mini globle map -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="js/globeminimap.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 main">
+            <section data-scene="overview">
+                <video class="background-fullscreen-setting" playsinline autoplay muted loop>
+                    <source src="assets/StoryMap Intro_1.mp4" type="video/mp4">
+                </video>
+                <div class= "background-fullscreen-setting text-responsive text-center" >
+                    <h2><br>Stomping Grounds</h2>
+                    <h3><small style="color: rgb(255,255,255)">a geovisual story of my favorite places</small></h3>
+                </div>
+            </section>
+            <section data-scene="anchorage">
+                <h4>Anchorage, AK and the Chugach Mountains</h4>
+                <p>On January 31, 1991, I was born in Anchorage, Alaska. While I didn't know it at the time, this city would eventually become my base camp, serving as the starting point of many adventures.</p>
+                <p>Anchorage provides relatively easy access to multiple mountain ranges, but the Chugach Range serves as the city's closest outdoor playground. Within these mountains lie endless possibilities for backcountry skiers, hikers, climbers, and all who enjoy high places and fresh air.</p>
+               <br>
+                <p><img src="assets/restaurant-small.png">    The Moose's Tooth is my favorite restaurant because it serves the best pizza I've ever tasted, on planet Earth. They also brew an array of tasty beers.</img></p>
+                <p><img src="assets/mountains-small.png">   View of Mt. Susitna from Flattop Mountain. This was taken at midnight during the summer.</img></p>
+            </section>
+
+            <section data-scene="socorro">
+                <h4>Socorro, NM</h4>
+                <p>In 2009, I moved to Socorro, NM. Socorro is a relatively sleepy desert town, roughly 80 miles south of Albuquerque, which is home to the thriving research university, New Mexico Tech. While attending this university, I discovered a wide array of delicious New Mexican flavors and also took some time to explore the surrounding desert.</p>
+                <br>
+                <p><img src="assets/cat-small.png">    This is Speck and Kiri, also known as the Franklin Street Patrol. They were my only roommates in Socorro who didn't pay rent, but they made up for it by looking tough and keeping watch over our residence.</img></p>
+
+            </section>
+
+            <section data-scene="box">
+                <h4>Box Canyon, NM</h4>
+                <p>Just outside of Socorro lies Box Canyon, a high-desert climbing destination featuring multiple styles of rock climbing: sport, traditional, and bouldering. Over the years, I probably spent just as much (or more) time climbing on Box's featured rhyolite as I spent in the classroom.</p>
+                <br>
+                <p><img src="assets/climbing-small.png">    Box Canyon is home to a wealth of interesting climbing on rhyolite, tuff, and a little bit of sandstone too.</img></p>
+            </section>
+
+            <section data-scene="taos">
+                <h4>Taos, NM</h4>
+                <p>Both during and after my undergraduate, I spent a total of 3 years as a woodworker and/or ski bum in Taos, NM, the most enchanting place I've ever lived. Taos is well known for it's art scene, delicious food, and its wealth of natural beauty. With the plunging Rio Grande Gorge to the west and the towering Sangre de Cristo Mountains to the east. I've officially adopted Taos as my second home.</p>
+                <br>
+                <p><img src="assets/canyon-small.png">    The Rio Grande Gorge, also known as the Taos Gorge, is well known for it's whitewater rafting and kayaking. However, for the less extreme among us, it is also home to several natural hot springs and excellent fishing.</img></p>
+            </section>
+            <section data-scene="tsv">
+                <h4>Sangre de Cristo Mountains, NM</h4>
+                <p>The Sangre de Cristo Mountains, just east of Taos, made easy work of capturing most of my attention while I lived in northern New Mexico. While working and skiing at the local ski resort, Taos Ski Valley, I also made time to explore the less traveled areas of this region.</p>
+                <br>
+                <p><img src="assets/mountains-small.png">    The Sangre de Cristo Mountains (Blood of Christ, in English) get their name from their typical red hue during sunset. In this photo, my friend Timmy walks the ridgeline of No Name Peak, eyeing perfect corn snow on the faces below.</img></p>
+            </section>
+
+            <section data-scene="corvallis">
+                <h4>Corvallis, OR</h4>
+                <p>After spending a healthy portion of my life exploring the southwest, I made the move to Corvallis, OR in 2016, to attend Oregon State University. I'm currently pursuing an M.S. degree in geotechnical engineering. When I'm not studying, I make time to explore the landscapes of Oregon and the greater Pacific Northwest. My current infatuation is the Cascade Mountain Range, but the trails around Corvallis offer plenty of fun without a 3 hour drive to the mountains.</p>
+                <br>
+                <p><img src="assets/bicycle-rider-small.png">    This is the East Ridge Trail that leads to the summit of Mary's Peak, just outside of Corvallis. The mountain biking on Mary's Peak is difficult and exposed, but pays off hugely with nice views in the old groth forest.</img></p>
+            </section>
+
+            <section data-scene="cascades">
+                <h4>The Cascades, OR</h4>
+                <p>The Cascades are a picturesque reminder of Oregon's volatile geologic history. About 200 million years ago, the Cascadia Subduction Zone formed, setting the stage for widespread volcanism in Oregon. This volcanism is the source of the Cascades, Oregon's renowned alpine playground, which features ample opportunities for hiking and backcountry skiing. Furthermore, Oregon's volcanic history is also responsible for the formation of Smith Rock, which is known to the worldwide climbing community as the birthplace of American sport climbing. </p>
+                <br>
+                <p><img src="assets/ski-stick-man-small.png">    On this particular day near Santiam Pass, the snow was light and soft, due to particularly low temperatures during the last storm.</img></p>
+                <p><img src="assets/mountains-small.png">    Despite it's reputation, sometimes the clouds will part in Oregon, and the resulting views make it feel quite vast. This captures Mt. Jefferson and The Sisters from Mt. Hood on a high-vis day.</img></p>
+            </section>
+
+            <section data-scene="end">
+                <div class= "end-background-img background-fullscreen-setting text-center" >
+                    <br/>
+                    <h3 style="color: black">Storymap and Photos By: Nick Mathews</h3>
+                    <h4 style="color: black"><small><a style="color: black" href="http://oregonstate.edu/~mathewsn">http://oregonstate.edu/~mathewsn</a></small></h4>
+                    <h4><small style="color: black">Template By: Bo Zhao<br>https://github.com/jakobzhao</small></h4>
+                </div>
+            </section>
+
+        </div>
+        <!--map div-->
+        <div id="map" class="col-sm-6 col-md-8 sidebar"></div>
+    </div>
+    <!--add a scrolling down arrow-->
+    <div class="animated zoomIn infinite glyphicon glyphicon-menu-down arrow-down"></div>
+    <!--add a navigation bar-->
+    <div class="navbar text-center"></div>
+
+    <!--add a info model -->
+    <div id="loading">
+        <i class="animated zoomIn infinite glyphicon glyphicon-globe"></i>
+    </div>
+
+    <dl>
+        <dt>
+            <!--facebook icon-->
+            <a class="fa fa-facebook-square btn" href="https://facebook.com/sharer.php?u=http://cdn.rawgit.com/jakobzhao/storymap/master/fullpage.html" target="_blank"></a>
+        </dt>
+        <dt>
+            <!--facebook icon-->
+            <a class="fa fa-git-square btn" href="https://github.com/jakobzhao/storymap" style="top:40px" target="_blank"></a>
+        </dt>
+        <dt>
+            <!--info icon-->
+            <i class="fa fa-file-text-o btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i>
+        </dt>
+    </dl>
+
+    <!--the info page-->
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is a web map of major cities in Oregon. It is mainly made as a demo for a course GEOG 371: Web Mapping provided by Oregon State University. The story map library is derived from the storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality relies on both leaflet and Boostrap.</p>
+                    <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.1 | MIT License </p>
+                    <p><b>Author: Bo Zhao</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University </p>
+                    <p>The context about Oregon cities was collected from Wikipedia.</p>
+                    <p>The <a src="https://www.youtube.com/watch?v=UJ_vQC9PNY4">background video</a> on the front page was clipped from Youtube. </p>
+                    <p>The favicon image was acquired from <a>http://www.udlcenter.org/advocacy/state/oregon.</a></p>
+                    <p>This story map uses geospatial data from mapbox, Google Earth Engine, Microsoft Bing map, Open Street Maps and Oregon Explorer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- main javascript -->
+<script type="text/javascript">
+
+    /**
+     * Created by jakob on 4/20/2017.
+     */
+    // Create Legend Contents in html format
+    var county_legend ='<i style="background: black; opacity: 0.5"></i><p><b>Counties</b></p>';
+    var corvallis_admin_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Corvallis</b></p>';
+    var forest_legend = '<i style="background: green; opacity: 0.5"></i><p><b>Forest</b></p>';
+
+    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
+    // var layers = {
+    //      'layer1': [layer1, legend1]
+    //      'layer2': [layer2, legend2]
+    //      ...
+    // }
+
+    var layers = {
+        'bing' : [L.tileLayer.bing('AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L')],
+        'counties': [ L.geoJson.ajax('/assets/counties.geojson',  {
+            color: 'black',
+            weight: 2,
+            opacity: 0.3}), county_legend],
+        'corvallis admin': [L.geoJson.ajax('http://mapious.ceoas.oregonstate.edu/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:admin&outputFormat=application%2Fjson',          {
+            color: 'orange',
+            weight: 5}), corvallis_admin_legend],
+        'forest cover 2010': [ L.tileLayer('http://earthengine.google.org/static/hansen_2013/tree_alpha/{z}/{x}/{y}.png'), forest_legend],
+        'satellite': [ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+            id: 'mapbox.satellite'
+        })]
+    };
+
+
+    var scenes = {
+        overview: {lat: 44, lng: -123.5, zoom: 7, position: 'fullpage', name: 'Cover Page'},
+        anchorage: {lat: 61.180306, lng: -149.807517, zoom: 10, name: 'Anchorage, AK'},
+        socorro: {lat: 34.068196, lng: -106.897661, zoom: 15, name: 'Socorro, NM'},
+        box: {lat: 33.986649, lng: -106.991300, zoom: 18, name: 'Box Canyon, NM' },
+        taos: {lat: 36.437204, lng: -105.717710, zoom: 12, name: 'Taos, NM'},
+        tsv: {lat: 36.546548, lng: -105.441529, zoom: 15, name: 'Sangre De Cristo Mountains, NM'},
+        corvallis: {lat: 44.5651158, lng: -123.3249388, zoom: 13, name: 'Corvallis'},
+        cascades: {lat: 44.174455, lng: -122.021726, zoom: 11, name: 'Cascades, OR'},
+        end: {lat: -10.668980, lng: -130.644962, zoom: 4, name: 'The End', position: 'fullpage'}
+    };
+
+    $('.main').storymap({
+        scenes: scenes,
+        layers: layers,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        scale: false,
+        navbar: true,
+
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map('map', {zoomControl: false, scrollWheelZoom: false});
+
+            // add an base map, which can be either OSM, mapbox, tilelayer, wmslayer or those designed by yourself.
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+                maxZoom: 18,
+                attribution: '<a href="http://ceoas.oregonstate.edu/profile/zhao/" target="_blank">Bo Zhao</a>',
+                id: 'mapbox.satellite' // ,detectRetina: true
+            }).addTo(map);
+
+            L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(map);
+
+            // to add geojson, use L.geojson //
+
+            // create a mini globe as the overview map control.
+            var miniMap = new L.Control.GlobeMiniMap({
+                marker:'red',
+                position: 'bottomright'
+            }).addTo(map);
+
+            // hidden the credits, but show in the about page.
+            $(".leaflet-control-attribution").css("display", "none");
+
+            return map;
+        }
+    });
+</script>
+</body>
+</html>
