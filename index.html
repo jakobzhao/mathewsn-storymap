@@ -186,7 +186,7 @@
     // }
 
     var layers = {
-        'bing' : [L.tileLayer.bing('AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L')],
+        'bing' : [L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')],
         'counties': [ L.geoJson.ajax('/assets/counties.geojson',  {
             color: 'black',
             weight: 2,
